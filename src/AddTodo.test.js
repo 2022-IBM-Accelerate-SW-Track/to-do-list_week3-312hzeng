@@ -21,10 +21,14 @@ afterEach(() => {
 
  test('test that App component doesn\'t render dupicate Task', () => {
   render(<App />);
+
  });
 
  test('test that App component doesn\'t add a task without task name', () => {
   render(<App />);
+  const inputTask = screen.getByRole('textbox', {name: /Add New Item/i});
+  const inputDate = screen.getByPlaceholderText("mm/dd/yyyy");
+  
  });
 
  test('test that App component doesn\'t add a task without due date', () => {
